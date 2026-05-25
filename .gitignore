@@ -1,3 +1,6 @@
 node_modules/
 *.wpress
 server-log.txt
+extracted/
+.DS_Store
+Thumbs.db
