@@ -1,8 +1,11 @@
 {
   "dependencies": {
-    "cheerio": "^1.2.0",
     "http-server": "^14.1.1",
     "puppeteer": "^25.0.4",
     "website-scraper": "^6.0.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "html-minifier-terser": "^7.2.0"
   }
 }
