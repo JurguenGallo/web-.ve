@@ -1,1 +1,7 @@
-.spotlight-instagram-app{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%}
+.spotlight-instagram-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

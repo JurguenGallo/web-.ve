@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cheerio": "^1.2.0",
     "http-server": "^14.1.1",
     "puppeteer": "^25.0.4",
     "website-scraper": "^6.0.0"
