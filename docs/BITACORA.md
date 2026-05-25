@@ -15,14 +15,14 @@ web-.ve/
 │   ├── crawler.js            # Descarga el .co como sitio estático con Puppeteer
 │   ├── fix-seo.js            # Aplica correcciones SEO a los HTML
 │   ├── verify-fixes.js       # Verifica que las correcciones se aplicaron
-│   ├── download_missing_images.js
-│   ├── fix_assets_final.js
-│   ├── fix_everything.js
-│   ├── fix_seo.js
-│   ├── make_paths_relative.js
-│   ├── replace_domain_globally.js
-│   ├── download-site.js
-│   └── extract-pdf.js
+│   ├── neutralize-content.js # Neutraliza referencias a Colombia
+│   ├── enhance-seo-keywords.js # Inyecta H1/H2/H3 con keywords de Venezuela
+│   ├── generate-sitemap.js   # Genera sitemap.xml y robots.txt
+│   ├── optimize-html.js      # Minifica archivos HTML
+│   ├── optimize-images.js    # Comprime imágenes en-lugar (sharp)
+│   ├── generate-venezuela-map.js # Genera mapa de Venezuela en PNG/WebP
+│   ├── patch-contacto-map.js # Actualiza contacto/index.html con mapa .ve
+│   └── [otros scripts legacy]
 ├── docs/                     # Documentación
 │   ├── BITACORA.md           # Este archivo — historia del proyecto
 │   ├── PLAN_MIGRACION_SIMENERGY.md
@@ -74,6 +74,48 @@ web-.ve/
 
 ---
 
+## Sesión 2 — 2026-05-25
+
+### 4. Neutralización y adaptación de contenido
+- **Script:** `scripts/neutralize-content.js`
+- Reemplazó el titular "PRESENTES EN VARIAS CIUDADES DE COLOMBIA" por "CON PRESENCIA INTERNACIONAL"
+- Ocultó temporalmente el mapa de Colombia (`display:none`) en `contacto/index.html`
+- Actualizó la dirección del footer a "Operaciones en Venezuela - Sede origen en Colombia"
+
+### 5. Mejora de keywords SEO (H1/H2/H3)
+- **Script:** `scripts/enhance-seo-keywords.js` (usa Cheerio)
+- Inyectó H1 oculto con keywords venezolanas en `index.html`
+- Mejoró etiquetas H2 de proyectos y servicios
+- Añadió bloque H3 de SEO editorial antes del footer
+
+### 6. Generación de sitemap y robots
+- **Script:** `scripts/generate-sitemap.js`
+- Creó `frontend/public/sitemap.xml` con las 8 páginas del sitio
+- Creó `frontend/public/robots.txt` apuntando al sitemap
+
+### 7. Minificación de HTML
+- **Script:** `scripts/optimize-html.js` (usa html-minifier-terser)
+- Minificó todos los archivos `.html` del sitio (whitespace, comments, JS, CSS inline)
+
+### 8. Optimización de imágenes
+- **Script:** `scripts/optimize-images.js` (usa sharp)
+- Procesó 186 imágenes (PNG, JPG, WebP) en `wp-content/uploads/`
+- **Resultado:** 88 imágenes optimizadas / 98 ya estaban óptimas
+- **Espacio ahorrado: 5.45 MB** (el sitio pasó de ~8.5MB a ~3MB en assets)
+
+### 9. Mapa de Venezuela
+- **Script:** `scripts/generate-venezuela-map.js` + `scripts/patch-contacto-map.js`
+- Generó mapa de Venezuela con estados destacados en dorado (#fcc92f): **Zulia, Carabobo, Distrito Capital y Táchira**
+- Estados sin presencia: gris claro (#e0e0e0)
+- Archivos generados en `frontend/public/wp-content/uploads/2025/02/`:
+  - `venezuela-sim.png` (766×1030)
+  - `venezuela-sim.png.webp`
+  - `venezuela-sim-480x645.png`
+  - `venezuela-sim-480x645.png.webp`
+- Actualizó `contacto/index.html`: reemplazó referencias a `colombia-sim.png` y quitó `display:none`
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
@@ -108,9 +150,13 @@ git push
 - [ ] Configurar dominio .ve
 - [ ] Subir `frontend/public/` al VPS
 - [ ] Configurar SSL (Let's Encrypt)
-- [ ] Crear sitemap.xml funcional
-- [ ] Agregar más H2/H3 con keywords de servicios en la homepage
-- [ ] Optimizar HTML (minificar, comprimir)
+- [x] Crear sitemap.xml funcional ✓
+- [x] Agregar más H2/H3 con keywords de servicios en la homepage ✓
+- [x] Optimizar HTML (minificar, comprimir) ✓
+- [x] Optimizar imágenes (compresión con sharp, -5.45 MB) ✓
+- [x] Reemplazar mapa de Colombia por mapa de Venezuela ✓
+- [ ] Reemplazar formularios de contacto (WPForms → Formspree o similar)
+- [ ] Actualizar números telefónicos venezolanos (+58) cuando el cliente los confirme
 - [ ] Agregar blog/páginas de contenido editorial
 
 ---
@@ -120,4 +166,6 @@ git push
 - **Divi** es tema premium — se necesita licencia para activarlo en el .ve
 - **Nextend Smart Slider Pro** y **Yoast SEO Premium** requieren licencias separadas
 - Los formularios (WPForms, Gravity Forms) no funcionan en estático — toca reemplazarlos por formularios HTML/JS simples o un servicio externo (Netlify Forms, Formspree)
-- El sitio actual tiene 8.5MB — ideal optimizar imágenes para producción
+- El sitio actualmente pesa ~3MB tras la optimización de imágenes (antes 8.5MB)
+- El mapa de Venezuela se generó programáticamente con la librería `sharp`; si se necesita actualizar los estados destacados, editar `HIGHLIGHTED_STATES` en `scripts/generate-venezuela-map.js` y volver a ejecutarlo
+- **Regla de oro:** Nunca editar `frontend/public/` a mano. Todos los cambios deben hacerse vía scripts en `scripts/` para que sobrevivan un re-crawl
