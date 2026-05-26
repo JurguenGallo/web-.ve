@@ -171,10 +171,11 @@ web-.ve/
 
 ## Sesión 7 — 2026-05-26
 
-### 14. Resolución de conflictos finales y sincronización con GitHub
-- **Conflicto de merge en contacto:** Se resolvió el conflicto de combinación en `contacto/index.html` aceptando los cambios del colega (estilos inline para espaciado de contadores y títulos), manteniendo el diseño visual correcto.
-- **Actualización de bitácora:** Se documentó la Sesión 7 con todos los cambios realizados.
-- **Limpieza de repositorio:** Se añadieron `scratch/` y `.vscode/` a `.gitignore` para evitar rastrear archivos temporales y de configuración del editor.
+### 14. Reemplazo del Feed de Instagram y Automatización
+- **Grilla Estática Premium:** Reemplazamos el plugin Spotlight en `galeria/index.html` por una grilla responsiva premium de 3x3 de proyectos reales de SIM Energy, enlazada a Instagram con efectos hover modernos.
+- **Limpieza de Scripts:** Removimos scripts y estilos en desuso de Spotlight para aligerar la carga de la página.
+- **Automatización:** Integramos el reemplazo y la limpieza de Spotlight en `scripts/neutralize-content.js` para asegurar que los cambios se mantengan en re-crawls.
+- **Resolución de Conflictos:** Sincronizamos con GitHub mediante pull --rebase y aplicamos la persistencia en `neutralize-content.js` sin problemas, restaurando el ocultamiento del mapa de Colombia en `contacto/index.html`.
 
 ---
 
