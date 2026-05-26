@@ -128,6 +128,17 @@ web-.ve/
 
 ---
 
+## Sesión 4 — 2026-05-26
+
+### 11. Actualización de "¿Quiénes somos?" — Expansión Venezuela
+- **Texto principal:** Se reescribió el párrafo de quienes-somos para indicar "origen en Norte de Santander, Colombia" y agregar la meta de expansión completa en Venezuela para **2027**.
+- **Dirección oficina:** Se agregó la dirección física: "Oficina N° 71, Piso 7, Torre Sofitasa, 7ma Avenida c/c Calle 10, San Cristóbal, Táchira" tanto en el texto principal como en el footer de las 4 páginas que tienen columna de contacto (quienes-somos, solucionesfotovoltaicas, galeria, energia-renovables).
+- **Sección POLÍTICAS:** Se dividió en 2 columnas independientes de igual ancho, cada una con su título y botón ("POLÍTICAS SISTEMA INTEGRADO" y "ALCOHOL, DROGAS Y TABAQUISMO") para evitar confusión de botones duplicados.
+- **Correo electrónico:** Se actualizó `gerencia@simenergy.com.ve` → `gerencia@simenergy.com` en todas las páginas.
+- **"17 años" → "18 años":** Se actualizó la trayectoria en quienes-somos.
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
