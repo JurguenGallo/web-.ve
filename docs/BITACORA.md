@@ -116,6 +116,16 @@ web-.ve/
 
 ---
 
+## Sesión 3 — 2026-05-26
+
+### 10. Corrección de Navegación, Espaciado de Botones y Banner de Venezuela
+- **Navegación de "Inicio":** Se repararon los enlaces vacíos (`href=""`) del botón "Inicio" en el menú de navegación de todas las páginas del sitio, redireccionándolo a la raíz (`/`) para que funcione correctamente e igual que el logo corporativo.
+- **Espaciado de Botones en Banner Principal:** Se aplicó una regla de estilo CSS en la página de inicio para empujar los botones principales hacia abajo, evitando que queden muy pegados a los textos y títulos superiores en pantallas de escritorio y móvil.
+- **Banner de Venezuela en la Homepage:** Se implementó y adaptó por completo la imagen del mapa de Venezuela (`portada-venezuela.png`) en el banner de la página de inicio, reemplazando la imagen de Colombia (`Presentes5.png` y `Presentes768.png`) tanto en la versión de escritorio como en la móvil, asegurando que sea consistente en todos los dispositivos.
+- **Resolución de Conflictos en Git:** Se resolvieron los conflictos de combinación en el archivo `index.html` generados por el rebase con el repositorio remoto, preservando todas las optimizaciones locales de SEO, estructura y diseño, y se subieron los cambios exitosamente a GitHub.
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
