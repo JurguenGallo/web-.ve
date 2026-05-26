@@ -156,6 +156,16 @@ web-.ve/
 
 ---
 
+## Sesión 6 — 2026-05-26
+
+### 13. Ajuste de posición y tamaño en título de Contacto
+- **Alineación y Margen Superior:** Se agregó un margen superior dinámico al título `"¡CON PRESENCIA INTERNACIONAL!"` en `contacto/index.html` utilizando `margin-top: clamp(20px, 6vw, 80px);`. Esto desplaza el título hacia abajo, rellenando el espacio vacío que quedaba arriba de los contadores y equilibrando el diseño visual de la sección respecto al mapa lateral.
+- **Aumento de Tamaño de Fuente:** Se incrementó ligeramente el tamaño de la fuente de `clamp(1.5rem, 3.5vw, 3rem)` a `clamp(1.8rem, 4.2vw, 3.5rem)` para mejorar la legibilidad y presencia del título principal.
+- **Automatización en Scripts:** Se actualizó `scripts/neutralize-content.js` para asegurar que este formato estilizado y posicionado sea aplicado de manera automática en futuros re-crawls de la página.
+
+---
+
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:

@@ -32,6 +32,13 @@ htmlFiles.forEach(relPath => {
     changed = true;
   }
 
+  // Apply correct size, margin-top and wrapping styles to contact/index.html header
+  const targetHeader = '<h1 style="text-align: center; font-size: clamp(1.8rem, 4.2vw, 3.5rem); letter-spacing: -1px; line-height: 1.2; margin-top: clamp(20px, 6vw, 80px); margin-bottom: clamp(15px, 3vw, 30px);">¡CON PRESENCIA <br><span style="color:#fcc92f; white-space: nowrap;">INTERNACIONAL!</span></h1>';
+  if (html.includes('¡CON PRESENCIA') && !html.includes('margin-top: clamp(20px')) {
+    html = html.replace(/<h1[^>]*>¡CON PRESENCIA.*?<\/h1>/gi, targetHeader);
+    changed = true;
+  }
+
   // 2. Hide Colombia map image in contact page
   if (html.includes('colombia-sim.png') && !html.includes('display:none;')) {
     // Replace the picture tag containing the colombia map with a hidden version
