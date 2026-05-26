@@ -322,7 +322,7 @@ body
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
   font-weight: 800;
   font-size: 18px;
-  min-height: 320px;
+  min-height: auto;
 }
 .et_pb_text_5 h1 {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
@@ -332,12 +332,13 @@ body
   line-height: 1.1em;
 }
 .et_pb_row_inner_1 {
-  background-color: #d1d1d1;
-  box-shadow: 0px 30px 65px -30px rgba(0, 0, 0, 0.35);
+  background-color: transparent;
+  box-shadow: none;
 }
 .et_pb_row_inner_1.et_pb_row_inner {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
+  margin-top: 0px !important;
 }
 .et_pb_number_counter_0.et_pb_number_counter h3,
 .et_pb_number_counter_0.et_pb_number_counter h1.title,

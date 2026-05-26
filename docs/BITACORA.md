@@ -160,13 +160,23 @@ web-.ve/
 
 ## Sesión 6 — 2026-05-26
 
-### 13. Ajuste de posición y tamaño en título de Contacto
+### 13. Ajuste de posición, tamaño y espaciado en título de Contacto
 - **Alineación y Margen Superior:** Se agregó un margen superior dinámico al título `"¡CON PRESENCIA INTERNACIONAL!"` en `contacto/index.html` utilizando `margin-top: clamp(20px, 6vw, 80px);`. Esto desplaza el título hacia abajo, rellenando el espacio vacío que quedaba arriba de los contadores y equilibrando el diseño visual de la sección respecto al mapa lateral.
 - **Aumento de Tamaño de Fuente:** Se incrementó ligeramente el tamaño de la fuente de `clamp(1.5rem, 3.5vw, 3rem)` a `clamp(1.8rem, 4.2vw, 3.5rem)` para mejorar la legibilidad y presencia del título principal.
-- **Automatización en Scripts:** Se actualizó `scripts/neutralize-content.js` para asegurar que este formato estilizado y posicionado sea aplicado de manera automática en futuros re-crawls de la página.
+- **Reducción de Separación Vertical:** Se eliminaron los márgenes y rellenos excesivos de las filas internas de Divi (`.et_pb_row_inner_0` y `.et_pb_row_inner_1`), y se redujo el `margin-bottom` del `<h1>` a `10px`. Adicionalmente, se limpiaron los paddings/margins de la columna interna (`.et_pb_column_inner_0`) y del módulo de texto (`.et_pb_text_5`), aplicando un margen superior negativo de `-50px !important` en la fila de contadores (`.et_pb_row_inner_1`) para unirlos físicamente y eliminar la separación de raíz.
+- **Automatización en Scripts:** Se actualizó `scripts/neutralize-content.js` para asegurar que este formato estilizado, posicionado y con espaciados ajustados sea aplicado de manera automática en futuros re-crawls de la página.
 
 ---
 
+
+## Sesión 7 — 2026-05-26
+
+### 14. Resolución de conflictos finales y sincronización con GitHub
+- **Conflicto de merge en contacto:** Se resolvió el conflicto de combinación en `contacto/index.html` aceptando los cambios del colega (estilos inline para espaciado de contadores y títulos), manteniendo el diseño visual correcto.
+- **Actualización de bitácora:** Se documentó la Sesión 7 con todos los cambios realizados.
+- **Limpieza de repositorio:** Se añadieron `scratch/` y `.vscode/` a `.gitignore` para evitar rastrear archivos temporales y de configuración del editor.
+
+---
 
 ## Cómo actualizar el sitio (para el amigo)
 

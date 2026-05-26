@@ -33,9 +33,47 @@ htmlFiles.forEach(relPath => {
   }
 
   // Apply correct size, margin-top and wrapping styles to contact/index.html header
-  const targetHeader = '<h1 style="text-align: center; font-size: clamp(1.8rem, 4.2vw, 3.5rem); letter-spacing: -1px; line-height: 1.2; margin-top: clamp(20px, 6vw, 80px); margin-bottom: clamp(15px, 3vw, 30px);">¡CON PRESENCIA <br><span style="color:#fcc92f; white-space: nowrap;">INTERNACIONAL!</span></h1>';
-  if (html.includes('¡CON PRESENCIA') && !html.includes('margin-top: clamp(20px')) {
+  const targetHeader = '<h1 style="text-align: center; font-size: clamp(1.8rem, 4.2vw, 3.5rem); letter-spacing: -1px; line-height: 1.2; margin-top: clamp(20px, 6vw, 80px); margin-bottom: 10px;">¡CON PRESENCIA <br><span style="color:#fcc92f; white-space: nowrap;">INTERNACIONAL!</span></h1>';
+  if (html.includes('¡CON PRESENCIA') && (!html.includes('margin-top: clamp(20px') || html.includes('margin-bottom: clamp(15px'))) {
     html = html.replace(/<h1[^>]*>¡CON PRESENCIA.*?<\/h1>/gi, targetHeader);
+    changed = true;
+  }
+
+  // Adjust inner row padding and margins in contacto to close the vertical gap
+  if (html.includes('<div class="et_pb_row_inner et_pb_row_inner_0">') && !html.includes('et_pb_row_inner_0" style="padding-bottom: 0px')) {
+    html = html.replace(
+      '<div class="et_pb_row_inner et_pb_row_inner_0">',
+      '<div class="et_pb_row_inner et_pb_row_inner_0" style="padding-bottom: 0px !important; margin-bottom: 0px !important;">'
+    );
+    changed = true;
+  }
+  if (html.includes('<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1">') && !html.includes('margin-top: -50px')) {
+    html = html.replace(
+      '<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1">',
+      '<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1" style="padding-top: 0px !important; margin-top: -50px !important;">'
+    );
+    changed = true;
+  } else if (html.includes('margin-top: 0px !important;')) {
+    html = html.replace('margin-top: 0px !important;', 'margin-top: -50px !important;');
+    changed = true;
+  }
+
+  // Clear padding/margin on column_inner_0 and text_5 to close the gap
+  const targetCol = '<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_0 et-last-child">';
+  if (html.includes(targetCol) && !html.includes('et_pb_column_inner_0 et-last-child" style=')) {
+    html = html.replace(
+      targetCol,
+      '<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_0 et-last-child" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">'
+    );
+    changed = true;
+  }
+
+  const targetText = '<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light">';
+  if (html.includes(targetText) && !html.includes('et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light" style=')) {
+    html = html.replace(
+      targetText,
+      '<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">'
+    );
     changed = true;
   }
 

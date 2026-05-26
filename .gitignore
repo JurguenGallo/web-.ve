@@ -4,3 +4,5 @@ server-log.txt
 extracted/
 .DS_Store
 Thumbs.db
+scratch/
+.vscode/
