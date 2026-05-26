@@ -154,6 +154,7 @@ web-.ve/
 - **Mapa de Colombia restaurado:** Se actualizó contacto con el mapa de Colombia (`colombia-sim.png`) y las direcciones de ambas sedes (Colombia + Venezuela), aplicando la corrección del width del iframe (100%).
 - **Resolución de conflictos:** Se hizo pull de GitHub, se resolvieron conflictos de merge en contacto y trabaja-con-nosotros, y se aplicaron las mejoras del colega sobre las nuestras.
 - **Ajuste botón COTIZA AQUÍ:** Se bajó el botón "COTIZA AQUÍ" del slider de galería con `margin-top: 40px` (slide 1 - Presentes5).
+- **Espaciado contadores en contacto:** Se redujo el espacio entre el título "¡CON PRESENCIA INTERNACIONAL!" y los contadores (18 años, +120 proyectos) con `margin-top: -30px` en el row de contadores.
 
 ---
 
