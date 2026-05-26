@@ -136,6 +136,7 @@ web-.ve/
 - **Sección POLÍTICAS:** Se dividió en 2 columnas independientes de igual ancho, cada una con su título y botón ("POLÍTICAS SISTEMA INTEGRADO" y "ALCOHOL, DROGAS Y TABAQUISMO") para evitar confusión de botones duplicados.
 - **Correo electrónico:** Se actualizó `gerencia@simenergy.com.ve` → `gerencia@simenergy.com` en todas las páginas.
 - **"17 años" → "18 años":** Se actualizó la trayectoria en quienes-somos.
+- **Corrección de Color en Botón Flotante de WhatsApp:** Se cambió el color de la animación y del botón expandido al hacer hover (pasar el mouse). Originalmente cambiaba a un color azul corporativo (`#224982`), y se modificó para que mantenga un color verde WhatsApp (`#20ba5a`, un tono verde ligeramente más oscuro para el efecto hover) en todas las páginas de la web.
 
 ---
 
