@@ -143,6 +143,19 @@ web-.ve/
 
 ---
 
+## Sesión 5 — 2026-05-26
+
+### 12. Ajustes finales y sincronización con GitHub
+- **Año actualizado:** Se cambió COPYRIGHT 2025 → 2026 en las 8 páginas del sitio.
+- **Portafolio actualizado:** PORTAFOLIO DE SERVICIOS 2025 → 2026 en quienes-somos y alquilerequiposelectricos.
+- **Experiencia actualizada:** "17 años" → "18 años" en index y quienes-somos.
+- **Contadores corregidos:** Personal de campo 60 → +100, administrativo 27 → 30 en quienes-somos.
+- **Búsqueda eliminada:** Se removió la lupa (ícono de búsqueda) y la barra de búsqueda del menú de navegación en todas las páginas.
+- **Mapa de Colombia restaurado:** Se actualizó contacto con el mapa de Colombia (`colombia-sim.png`) y las direcciones de ambas sedes (Colombia + Venezuela), aplicando la corrección del width del iframe (100%).
+- **Resolución de conflictos:** Se hizo pull de GitHub, se resolvieron conflictos de merge en contacto y trabaja-con-nosotros, y se aplicaron las mejoras del colega sobre las nuestras.
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
