@@ -137,6 +137,7 @@ web-.ve/
 - **Correo electrónico:** Se actualizó `gerencia@simenergy.com.ve` → `gerencia@simenergy.com` en todas las páginas.
 - **"17 años" → "18 años":** Se actualizó la trayectoria en quienes-somos.
 - **Corrección de Color en Botón Flotante de WhatsApp:** Se cambió el color de la animación y del botón expandido al hacer hover (pasar el mouse). Originalmente cambiaba a un color azul corporativo (`#224982`), y se modificó para que mantenga un color verde WhatsApp (`#20ba5a`, un tono verde ligeramente más oscuro para el efecto hover) en todas las páginas de la web.
+- **Reorganización del Banner de Venezuela:** Se movió la imagen original `Portada de pagina web.png` de la raíz al directorio de recursos del sitio en `wp-content/uploads/2026/portada-venezuela/`. Posteriormente, se actualizó la ruta de la primera diapositiva del banner principal en `index.html` para que apunte a este nuevo recurso.
 
 ---
 
