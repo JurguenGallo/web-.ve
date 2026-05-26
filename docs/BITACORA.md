@@ -138,6 +138,8 @@ web-.ve/
 - **"17 años" → "18 años":** Se actualizó la trayectoria en quienes-somos.
 - **Corrección de Color en Botón Flotante de WhatsApp:** Se cambió el color de la animación y del botón expandido al hacer hover (pasar el mouse). Originalmente cambiaba a un color azul corporativo (`#224982`), y se modificó para que mantenga un color verde WhatsApp (`#20ba5a`, un tono verde ligeramente más oscuro para el efecto hover) en todas las páginas de la web.
 - **Reorganización del Banner de Venezuela:** Se movió la imagen original `Portada de pagina web.png` de la raíz al directorio de recursos del sitio en `wp-content/uploads/2026/portada-venezuela/`. Posteriormente, se actualizó la ruta de la primera diapositiva del banner principal en `index.html` para que apunte a este nuevo recurso.
+- **Actualización de la página Contacto:** Se corrigió el texto de la dirección de Venezuela a un formato más natural, se restauró la imagen original del mapa de Colombia para no crear expectativas erróneas, y se actualizaron los números a "18 años" y "+120 proyectos". Además, se ajustó el iframe del mapa de Google a `width="100%"` para hacerlo responsivo y centrado correctamente.
+- **Corrección de imágenes en "Trabaja con nosotros":** Se solucionó un problema de imágenes rotas que ocurría debido a etiquetas `<picture>` con rutas dinámicas hacia versiones de resoluciones inexistentes. Se configuró para que siempre carguen las versiones `.webp` válidas y de alta calidad alojadas en el caché local en cualquier tipo de pantalla.
 
 ---
 
