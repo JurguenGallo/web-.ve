@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe de Despliegue - SIM Energy .ve</title>
+<style>
+  @page { margin: 20mm 15mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a2e;
+    line-height: 1.6;
+    padding: 30px;
+  }
+  h1 {
+    font-size: 26px;
+    color: #16213e;
+    border-bottom: 3px solid #fcc92f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 20px;
+    color: #224982;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    border-left: 4px solid #fcc92f;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 16px;
+    color: #16213e;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  p { margin-bottom: 10px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+  th {
+    background: #224982;
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) td { background: #f8f9fa; }
+  .total-row td {
+    font-weight: bold;
+    background: #fcc92f !important;
+    color: #16213e;
+    font-size: 15px;
+  }
+  .badge {
+    display: inline-block;
+    background: #224982;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  .badge-green { background: #28a745; }
+  .badge-warn { background: #fcc92f; color: #16213e; }
+  .box {
+    background: #f0f4ff;
+    border-left: 4px solid #224982;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .steps { counter-reset: step; }
+  .steps li {
+    list-style: none;
+    margin-bottom: 12px;
+    padding-left: 36px;
+    position: relative;
+  }
+  .steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    background: #224982;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: 'Consolas', 'Courier New', monospace;
+  }
+  pre {
+    background: #1a1a2e;
+    color: #e0e0e0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  pre code { background: none; padding: 0; color: inherit; }
+  .header-bar {
+    background: #16213e;
+    color: #fff;
+    padding: 25px 30px;
+    margin: -30px -30px 30px -30px;
+    border-radius: 0;
+  }
+  .header-bar h1 { color: #fcc92f; border: none; margin: 0; padding: 0; }
+  .header-bar p { color: #ccc; margin: 5px 0 0 0; font-size: 14px; }
+  .footer-bar {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 2px solid #224982;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+  }
+  .page-break { page-break-before: always; }
+  @media print {
+    body { padding: 0; }
+    .header-bar { margin: 0 0 20px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header-bar">
+  <h1>SIM ENERGY .ve</h1>
+  <p>Informe de Despliegue — Netcro Hosting</p>
+  <p style="font-size:12px;color:#999">Fecha: Mayo 2026</p>
+</div>
+
+<h2>1. Resumen del Proyecto</h2>
+<p>
+  Migración del sitio <strong>simenergy.com.co</strong> (WordPress + PHP + Divi) a un sitio <strong>estático HTML/CSS/JS</strong> para <strong>simenergy.com.ve</strong>, alojado en <strong>Netcro Hosting</strong>.
+</p>
+<p>
+  El sitio pesa aproximadamente <strong>3 MB</strong> tras optimización de imágenes y minificación de HTML.
+</p>
+
+<h2>2. Plan Contratado</h2>
+
+<table>
+  <tr>
+    <th>Producto</th>
+    <th>Descripción</th>
+    <th>Precio</th>
+  </tr>
+  <tr>
+    <td>Web Hosting cPanel Mx1</td>
+    <td>
+      <span class="badge">Miami, FL</span>
+      <span class="badge badge-green">NVMe SSD</span>
+      <span class="badge">CloudLinux</span><br>
+      Node.js &amp; Python, DDoS Protection, cPanel
+    </td>
+    <td>$40.00 / año</td>
+  </tr>
+  <tr>
+    <td>Dominio simenergy.com.ve</td>
+    <td>Registro por 1 año</td>
+    <td>$15.00 / año</td>
+  </tr>
+  <tr class="total-row">
+    <td colspan="2">Total a Pagar</td>
+    <td>$55.00 USD</td>
+  </tr>
+</table>
+
+<h2>3. Datos del Hosting</h2>
+
+<table>
+  <tr><th>Dato</th><th>Valor</th></tr>
+  <tr><td>Proveedor</td><td>Netcro Hosting (<a href="https://netcrohosting.com.ve">netcrohosting.com.ve</a>)</td></tr>
+  <tr><td>Data Center</td><td>Miami, FL — 36 NE 2nd St, Ste 400</td></tr>
+  <tr><td>Tecnología</td><td>NVMe Ultra-Fast Storage + CloudLinux OS</td></tr>
+  <tr><td>Soporte</td><td>Node.js &amp; Python (compatible con sitio estático)</td></tr>
+  <tr><td>Protección</td><td>DDoS Protection Integrado</td></tr>
+</table>
+
+<h2>4. Métodos de Pago Disponibles</h2>
+
+<table>
+  <tr><th>Método</th><th>Descripción</th></tr>
+  <tr><td><strong>PayPal</strong></td><td>Pago con saldo PayPal o tarjeta vinculada</td></tr>
+  <tr><td><strong>Credit Card</strong></td><td>Tarjeta de crédito/débito directa</td></tr>
+  <tr><td><strong>Binance Pay</strong></td><td>Criptomonedas vía Binance (USDT, BTC, etc.)</td></tr>
+  <tr><td><strong>Stripe</strong></td><td>Plataforma de pagos internacional</td></tr>
+</table>
+
+<div class="box">
+  <strong>Recomendación:</strong> Binance Pay (sin comisiones altas) o PayPal (más seguro para el comprador).
+</div>
+
+<div class="page-break"></div>
+
+<h2>5. Plan de Despliegue — Paso a Paso</h2>
+
+<h3>5.1 Pago y Contratación</h3>
+<ol class="steps">
+  <li>Ingresar a <a href="https://netcrohosting.com.ve">netcrohosting.com.ve</a></li>
+  <li>Seleccionar Web Hosting cPanel Mx1 — $40/año</li>
+  <li>Agregar dominio <code>simenergy.com.ve</code> — $15/año</li>
+  <li>Pagar vía Binance Pay o PayPal — <strong>Total: $55 USD</strong></li>
+  <li>Recibir credenciales del cPanel (IP, usuario, contraseña)</li>
+</ol>
+
+<h3>5.2 Preparar el Sitio (está listo — se sube directo)</h3>
+<p>El sitio estático ya está generado en <code>frontend/public/</code> con todos los archivos HTML, CSS, JS, imágenes y fuentes optimizados.</p>
+
+<h3>5.3 Subir Archivos al Hosting</h3>
+
+<p><strong>Opción A — cPanel File Manager:</strong></p>
+<ol>
+  <li>Entrar a cPanel → File Manager → <code>public_html</code></li>
+  <li>Subir todo el contenido de <code>frontend/public/</code></li>
+  <li>Extraer si viene en .zip</li>
+</ol>
+
+<p><strong>Opción B — FTP (recomendado):</strong></p>
+<pre><code># Conectar por FTP (usar FileZilla o similar)
+Servidor: ftp.tudominio.com.ve  (o la IP)
+Usuario:  (el que dé Netcro)
+Puerto:  21
+
+# Subir la carpeta public al servidor
+# Arrastrar todo el contenido de frontend/public/ a public_html/</code></pre>
+
+<p><strong>Opción C — Node.js script de deploy:</strong></p>
+<pre><code># Desde la raíz del proyecto en tu PC
+cd C:\Users\Usuario\Documents\GitHub\web-.ve
+
+# Si tienes SSH habilitado (preguntar a Netcro)
+scp -r frontend/public/* usuario@IP:/home/usuario/public_html/</code></pre>
+
+<h3>5.4 Configurar Dominio</h3>
+<ol>
+  <li>En cPanel ir a <strong>Domains</strong> → <strong>Addon Domains</strong></li>
+  <li>Agregar <code>simenergy.com.ve</code> apuntando a <code>public_html</code></li>
+  <li>Si el dominio ya está registrado, cambiar los nameservers a los de Netcro</li>
+</ol>
+
+<div class="box">
+  <strong>Nota:</strong> Si el dominio .ve lo registraste con Netcro, ellos lo configuran automáticamente. No necesitas hacer nada más.
+</div>
+
+<h3>5.5 SSL (HTTPS)</h3>
+<ol>
+  <li>En cPanel ir a <strong>SSL/TLS</strong> → <strong>Let's Encrypt</strong></li>
+  <li>Seleccionar <code>simenergy.com.ve</code> y emitir certificado</li>
+  <li>Activar <strong>Auto SSL</strong> para renovación automática cada 90 días</li>
+</ol>
+
+<h3>5.6 Verificar que todo funciona</h3>
+<ul>
+  <li>Abrir <code>https://simenergy.com.ve</code> y revisar que cargue</li>
+  <li>Probar todas las páginas: inicio, quiénes-somos, contacto, galería, etc.</li>
+  <li>Verificar imágenes, sliders y WhatsApp flotante</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>6. Estructura del Sitio en el Servidor</h2>
+
+<pre><code>/home/usuario/public_html/
+├── index.html
+├── robots.txt
+├── sitemap.xml
+├── contacto/
+├── quienes-somos/
+├── solucionesfotovoltaicas/
+├── alquilerequiposelectricos/
+├── galeria/
+├── energia-renovables/
+├── trabajo-con-nosotros/
+└── wp-content/
+    └── uploads/        (imágenes, fuentes, assets)</code></pre>
+
+<h2>7. Costos Anuales</h2>
+
+<table>
+  <tr><th>Concepto</th><th>Monto</th></tr>
+  <tr><td>Web Hosting cPanel Mx1 (año 1)</td><td>$40.00</td></tr>
+  <tr><td>Dominio simenergy.com.ve (año 1)</td><td>$15.00</td></tr>
+  <tr><td>SSL Let's Encrypt</td><td class="badge-green" style="color:#fff">Gratis</td></tr>
+  <tr class="total-row"><td>Total año 1</td><td>$55.00 USD</td></tr>
+  <tr><td>Renovación hosting (año 2+)</td><td>$40.00</td></tr>
+  <tr><td>Renovación dominio (año 2+)</td><td>$15.00</td></tr>
+  <tr class="total-row"><td>Total años siguientes</td><td>$55.00 USD / año</td></tr>
+</table>
+
+<h2>8. Notas Importantes</h2>
+
+<div class="box" style="border-left-color:#fcc92f">
+  <strong>⚠ Sitio estático:</strong> No necesita WordPress, MySQL, PHP ni ningún panel extra. Solo subir los HTML/CSS/JS y listo. El cPanel sirve únicamente para gestionar archivos y el SSL.
+</div>
+
+<ul>
+  <li>Los formularios de contacto no funcionan en estático — toca reemplazarlos por Formspree o Netlify Forms cuando el cliente los pida</li>
+  <li>Los números de teléfono están pendientes de confirmación por parte del cliente</li>
+  <li>El mapa de Venezuela ya está generado e integrado en la página de contacto</li>
+  <li>Para actualizar el sitio en el futuro:<br>
+    <code>git pull</code> en tu PC → subir los nuevos archivos por FTP al servidor</li>
+</ul>
+
+<h2>9. Checklist de Despliegue</h2>
+
+<table>
+  <tr><th style="width:30px">#</th><th>Tarea</th><th>Estado</th></tr>
+  <tr><td>1</td><td>Pagar hosting + dominio ($55 USD)</td><td>⬜ Pendiente</td></tr>
+  <tr><td>2</td><td>Recibir credenciales cPanel</td><td>⬜ Pendiente</td></tr>
+  <tr><td>3</td><td>Subir archivos del sitio al servidor</td><td>⬜ Pendiente</td></tr>
+  <tr><td>4</td><td>Configurar dominio en cPanel</td><td>⬜ Pendiente</td></tr>
+  <tr><td>5</td><td>Emitir SSL Let's Encrypt</td><td>⬜ Pendiente</td></tr>
+  <tr><td>6</td><td>Verificar sitio funcionando</td><td>⬜ Pendiente</td></tr>
+  <tr><td>7</td><td>Probar en desktop + móvil</td><td>⬜ Pendiente</td></tr>
+</table>
+
+<div class="footer-bar">
+  <p>SIM Energy .ve — Informe generado el 26 de mayo de 2026</p>
+  <p>Netcro Hosting — Web Hosting cPanel Mx1 — simenergy.com.ve</p>
+</div>
+
+</body>
+</html>
