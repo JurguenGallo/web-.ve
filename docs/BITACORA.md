@@ -123,6 +123,7 @@ web-.ve/
 - **Espaciado de Botones en Banner Principal:** Se aplicó una regla de estilo CSS en la página de inicio para empujar los botones principales hacia abajo, evitando que queden muy pegados a los textos y títulos superiores en pantallas de escritorio y móvil.
 - **Banner de Venezuela en la Homepage:** Se implementó y adaptó por completo la imagen del mapa de Venezuela (`portada-venezuela.png`) en el banner de la página de inicio, reemplazando la imagen de Colombia (`Presentes5.png` y `Presentes768.png`) tanto en la versión de escritorio como en la móvil, asegurando que sea consistente en todos los dispositivos.
 - **Resolución de Conflictos en Git:** Se resolvieron los conflictos de combinación en el archivo `index.html` generados por el rebase con el repositorio remoto, preservando todas las optimizaciones locales de SEO, estructura y diseño, y se subieron los cambios exitosamente a GitHub.
+- **Reemplazo del Carrusel de Logos por uno CSS Infinito:** Se eliminó el slider de Smart Slider 3 para los logos de aliados/clientes (que presentaba bugs aleatorios en la exportación estática) en todas las páginas del sitio (`alquilerequiposelectricos`, `energia-renovables`, `quienes-somos`, `solucionesfotovoltaicas` e `index.html`). Se reemplazó por un carrusel marquesina infinitamente desplazable hecho 100% en CSS, el cual es 100% estable, fluido (acelerado por GPU) y responsivo.
 
 ---
 
