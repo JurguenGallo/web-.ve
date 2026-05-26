@@ -47,10 +47,32 @@ htmlFiles.forEach(relPath => {
     );
     changed = true;
   }
-  if (html.includes('<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1">') && !html.includes('et_pb_row_inner_1 et_animated et_pb_gutters1" style="padding-top: 0px')) {
+  if (html.includes('<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1">') && !html.includes('margin-top: -50px')) {
     html = html.replace(
       '<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1">',
-      '<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1" style="padding-top: 0px !important; margin-top: 0px !important;">'
+      '<div class="et_pb_row_inner et_pb_row_inner_1 et_animated et_pb_gutters1" style="padding-top: 0px !important; margin-top: -50px !important;">'
+    );
+    changed = true;
+  } else if (html.includes('margin-top: 0px !important;')) {
+    html = html.replace('margin-top: 0px !important;', 'margin-top: -50px !important;');
+    changed = true;
+  }
+
+  // Clear padding/margin on column_inner_0 and text_5 to close the gap
+  const targetCol = '<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_0 et-last-child">';
+  if (html.includes(targetCol) && !html.includes('et_pb_column_inner_0 et-last-child" style=')) {
+    html = html.replace(
+      targetCol,
+      '<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_0 et-last-child" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">'
+    );
+    changed = true;
+  }
+
+  const targetText = '<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light">';
+  if (html.includes(targetText) && !html.includes('et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light" style=')) {
+    html = html.replace(
+      targetText,
+      '<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_text_align_left et_pb_bg_layout_light" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">'
     );
     changed = true;
   }
