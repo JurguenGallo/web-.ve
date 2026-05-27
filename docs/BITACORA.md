@@ -248,6 +248,19 @@ web-.ve/
 
 ---
 
+## Sesión 13 — 2026-05-27
+
+### 20. Correcciones de recomendaciones SEO pendientes
+- **Script:** `scripts/fix-recommendations.js`
+- **#5 Formularios:** Se reemplazaron los 5 formularios Divi (WPForms) por formularios HTML funcionales que apuntan a Formspree. El endpoint está como placeholder (`https://formspree.io/f/xxxxxxx`) — el usuario debe crear una cuenta gratis en formspree.io y reemplazarlo.
+- **#7 Lazy loading:** Se agregó `loading="lazy"` a 89 imágenes en todas las páginas (excepto logos).
+- **#6 Blog:** Se creó la estructura base del blog en `/blog/` con diseño responsivo y meta tags SEO.
+- **#10 Mobile:** Se verificaron y corrigieron meta viewport en todas las páginas.
+- **#1-3 API Key:** Se creó `docs/API_KEY_NOTES.md` con instrucciones para restringir la API key de Google Maps en Google Cloud Console.
+- **Pendiente del usuario:** Número real de WhatsApp (#4) e ID de Google Analytics (#9).
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
