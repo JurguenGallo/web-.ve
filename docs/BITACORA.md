@@ -204,12 +204,33 @@ web-.ve/
 
 ## Sesión 11 — 2026-05-27
 
-### 18. Auditoría SEO automatizada
-- **Script:** `scripts/seo-audit.js` — analiza las 8 páginas del sitio estático y genera un reporte en PDF
-- **Reportes generados en `docs/`:**
-  - `AUDITORIA_SEO.pdf` — informe completo en PDF listo para compartir
-  - `auditoria-seo.html` — versión HTML del mismo informe
-- **Indicadores analizados:** titles, meta descriptions, H1-H3, alt text, Open Graph, Twitter Cards, Schema JSON-LD, viewport, canonical, hreflang, imágenes rotas
+### 18. Auditoría SEO completa automatizada
+- **Script:** `scripts/seo-audit.js` — análisis exhaustivo de las 8 páginas del sitio
+- **Reportes generados:**
+  - `docs/AUDITORIA_SEO.pdf` — informe profesional en PDF (~872 KB)
+  - `docs/auditoria-seo.html` — versión HTML del mismo informe
+- **Indicadores analizados por página:**
+  - Title (longitud, keywords, ubicación geográfica)
+  - Meta description (longitud, presencia de "Venezuela")
+  - H1 (cantidad, contenido)
+  - H2-H6 (jerarquía y cantidad)
+  - Alt text en imágenes
+  - Open Graph (title, description, image, url, type)
+  - Twitter Cards (card, title, description, image)
+  - Schema JSON-LD (tipos Organization / ProfessionalService)
+  - Viewport responsive
+  - Canonical URL y hreflang
+  - Imágenes rotas (local filesystem check)
+  - Keywords density por página
+  - Redes sociales enlazadas
+  - Peso de página
+- **Análisis global del sitio:**
+  - Sitemap.xml y robots.txt
+  - Minificación de HTML
+  - Optimización de imágenes (peso, formato WebP)
+  - API key de Google Maps expuesta
+  - Número WhatsApp placeholder detectado
+- **Puntaje general: XX%** (calculado como pasados / total)
 
 ---
 
