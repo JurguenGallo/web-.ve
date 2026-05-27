@@ -261,6 +261,16 @@ web-.ve/
 
 ---
 
+## Sesión 14 — 2026-05-27
+
+### 21. Auditoría SEO con nombre personalizado
+- **Audit:** Se generó una copia del informe de auditoría SEO con el nombre del modelo: `AUDITORIA_SEO_NEMOTRON_3.pdf` y `auditoria-seo-nemotron-3.html`
+- **Ubicación:** `docs/AUDITORIA_SEO_NEMOTRON_3.pdf` y `docs/auditoria-seo-nemotron-3.html`
+- **Contenido idéntico:** Contiene la misma auditoría completa (puntaje 88%) que el informe estándar.
+- **Propósito:** Permite tener una versión del reporte con identificación personalizada para casos de uso específicos.
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
