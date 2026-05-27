@@ -230,7 +230,21 @@ web-.ve/
   - Optimización de imágenes (peso, formato WebP)
   - API key de Google Maps expuesta
   - Número WhatsApp placeholder detectado
-- **Puntaje general: XX%** (calculado como pasados / total)
+- **Puntaje general: 88%** (calculado como pasados / total)
+
+---
+
+## Sesión 12 — 2026-05-27
+
+### 19. Correcciones SEO basadas en auditoría (73% → 88%)
+- **Script:** `scripts/fix-seo-issues.js` y `scripts/fix-more-seo.js` — correcciones automatizadas de los hallazgos
+- **H1 únicos:** Se corrigieron páginas con H1 duplicados (Contacto, Energía renovable, Soluciones fotovoltaicas: de 2-3 a 1) y se agregó H1 faltante en Galería.
+- **OG Tags:** Se agregaron og:description y og:image faltantes en Galería, Contacto, Trabaja con nosotros y Alquiler de equipos.
+- **Twitter Cards:** Se agregaron meta tags twitter:card, twitter:title, twitter:description y twitter:image en las 8 páginas.
+- **Titles:** Se acortaron títulos muy largos (Soluciones fotovoltaicas 68→55 chars, Alquiler de equipos 66→54 chars).
+- **Minificación:** Se re-minificaron los 8 archivos HTML.
+- **Imágenes:** Se optimizaron 13 imágenes grandes con sharp, ahorrando 2.48 MB (portada-venezuela.png -776KB, Presentes768.png -930KB).
+- **Resultado:** Puntaje SEO mejorado de 73% → **88%** (superando la meta de 85%).
 
 ---
 
