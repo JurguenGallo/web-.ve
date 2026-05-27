@@ -186,6 +186,15 @@ web-.ve/
 
 ---
 
+## Sesión 9 — 2026-05-27
+
+### 16. Corrección de calculadora fotovoltaica en Soluciones Fotovoltaicas
+- **Botones de la calculadora:** Se reemplazaron los atributos `onclick="return!1"` y `data-rocket-onclick="fn()"` por `onclick="fn()"` directo en los 3 botones (Calcular, Reiniciar, Eliminar selección), ya que `data-rocket-onclick` solo funciona con WP Rocket activo y el sitio es estático.
+- **Script de la calculadora:** Se cambió `type="rocketlazyloadscript"` a `type="text/javascript"` para que el JavaScript se ejecute sin necesidad de WP Rocket.
+- **Carga de Google Maps:** Se cambió `data-rocket-src` a `src` en el script de la API de Google Maps para que cargue correctamente en entorno estático.
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
