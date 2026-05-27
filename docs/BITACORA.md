@@ -269,6 +269,17 @@ web-.ve/
 - **Contenido idéntico:** Contiene la misma auditoría completa (puntaje 88%) que el informe estándar.
 - **Propósito:** Permite tener una versión del reporte con identificación personalizada para casos de uso específicos.
 
+
+---
+
+## Sesión 15 — 2026-05-27
+
+### 22. Incorporación de slider eólico y reorganización de diapositivas
+- **Slider Eólico en Inicio:** Se integró la nueva diapositiva eólica (`Eolica.png` de la carpeta `portada Eolica`) como el tercer y último slide en la página principal (`index.html`), enlazando el botón a `/energia-renovables/` con el texto "CONOCE MÁS".
+- **Slider Eólico en Galería:** Se insertó la diapositiva eólica como el tercer slide en la página de galería (`galeria/index.html`), enlazando de igual forma a `/energia-renovables/`.
+- **Desplazamiento del slide de Venezuela:** En la galería, la diapositiva de Venezuela pasó a ser el cuarto slide para respetar el orden visual deseado.
+- **Automatización por Script:** Todo el proceso de inserción y reordenamiento de nodos DOM y backgrounds de Smart Slider 3 fue automatizado mediante un script en Node.js (`scratch/update_slider_eolica.js`) usando Cheerio, garantizando consistencia, precisión técnica y un HTML limpio sin errores de etiquetas mal cerradas.
+
 ---
 
 ## Cómo actualizar el sitio (para el amigo)

@@ -23,4 +23,10 @@ Este documento define la planificación para adaptar el sitio web clonado de SIM
    - Reemplazar la silueta de Colombia por la de Venezuela en el banner principal y en Contacto.
    - Reparar navegación al inicio y espaciado de botones.
    - Configurar teléfonos y direcciones específicas de Venezuela (pendiente de confirmación final).
+5. **Fase 5: Incorporación de Slider Eólico y Reorganización de Diapositivas (Completado)**
+   - Integrar la diapositiva eólica (`Eolica.png`) en el inicio como la tercera y última diapositiva (enlazando a `/energia-renovables/`).
+   - Integrar la diapositiva eólica en la galería como el tercer slide.
+   - Desplazar la diapositiva de Venezuela en la galería para que pase a ser el cuarto slide.
+   - Automatizar todo mediante scripts robustos en Node.js usando Cheerio.
+
 
