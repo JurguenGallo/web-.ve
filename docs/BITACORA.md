@@ -179,6 +179,13 @@ web-.ve/
 
 ---
 
+## Sesión 8 — 2026-05-27
+
+### 15. Cambio de imagen en Slide 2 de Soluciones Fotovoltaicas
+- **Actualización de imagen:** Se reemplazó la imagen `Presentes768.png` (Slide 2 del banner principal) de "Nuevo Servicio Soluciones Fotovoltaicas" por una versión actualizada que muestra únicamente "Soluciones Fotovoltaicas", eliminando la referencia a "Nuevo Servicio".
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
