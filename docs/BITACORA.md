@@ -202,6 +202,17 @@ web-.ve/
 
 ---
 
+## Sesión 11 — 2026-05-27
+
+### 18. Auditoría SEO automatizada
+- **Script:** `scripts/seo-audit.js` — analiza las 8 páginas del sitio estático y genera un reporte en PDF
+- **Reportes generados en `docs/`:**
+  - `AUDITORIA_SEO.pdf` — informe completo en PDF listo para compartir
+  - `auditoria-seo.html` — versión HTML del mismo informe
+- **Indicadores analizados:** titles, meta descriptions, H1-H3, alt text, Open Graph, Twitter Cards, Schema JSON-LD, viewport, canonical, hreflang, imágenes rotas
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
