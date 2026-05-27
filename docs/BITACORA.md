@@ -195,6 +195,13 @@ web-.ve/
 
 ---
 
+## Sesión 10 — 2026-05-27
+
+### 17. Actualización de enlace del Portafolio de Servicios 2026
+- **Cambio de ruta:** Se reemplazó el enlace del Google Drive (`https://drive.google.com/file/d/10uEUJkZNa8M-b34cm0m5p9h4syUtuyyQ/view?usp=share_link`) por la ruta local del PDF en `/wp-content/uploads/2026/Portafolio%20SIM%202026.pdf` en la página ¿Quiénes somos?.
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
