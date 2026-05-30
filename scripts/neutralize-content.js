@@ -23,19 +23,10 @@ htmlFiles.forEach(relPath => {
   let html = fs.readFileSync(fullPath, 'utf8');
   let changed = false;
 
-  // 1. Replace contact page headline
-  if (html.includes('¡PRESENTES EN VARIAS CIUDADES DE <span style="color: #fcc92f;">COLOMBIA</span>!')) {
-    html = html.replace(
-      '¡PRESENTES EN VARIAS CIUDADES DE <span style="color: #fcc92f;">COLOMBIA</span>!',
-      '¡CON PRESENCIA <span style="color: #fcc92f;">INTERNACIONAL</span>!'
-    );
-    changed = true;
-  }
-
-  // Apply correct size, margin-top and wrapping styles to contact/index.html header
-  const targetHeader = '<h1 style="text-align: center; font-size: clamp(1.8rem, 4.2vw, 3.5rem); letter-spacing: -1px; line-height: 1.2; margin-top: clamp(20px, 6vw, 80px); margin-bottom: 10px;">¡CON PRESENCIA <br><span style="color:#fcc92f; white-space: nowrap;">INTERNACIONAL!</span></h1>';
-  if (html.includes('¡CON PRESENCIA') && (!html.includes('margin-top: clamp(20px') || html.includes('margin-bottom: clamp(15px'))) {
-    html = html.replace(/<h1[^>]*>¡CON PRESENCIA.*?<\/h1>/gi, targetHeader);
+  // 1. Apply styles to contact page headline (PRESENTES EN VARIAS CIUDADES DE COLOMBIA)
+  const targetHeader = '<h2 style="text-align: center; font-size: clamp(1.8rem, 4.2vw, 3.5rem); letter-spacing: -1px; line-height: 1.2; margin-top: clamp(20px, 6vw, 80px); margin-bottom: 10px;">¡PRESENTES EN VARIAS CIUDADES DE <span style="color: #fcc92f;">COLOMBIA</span>!</h2>';
+  if (html.includes('¡PRESENTES EN VARIAS CIUDADES DE') && !html.includes('margin-top: clamp(20px')) {
+    html = html.replace(/<h2[^>]*>¡PRESENTES EN VARIAS CIUDADES DE.*?<\/h2>/gi, targetHeader);
     changed = true;
   }
 

@@ -17,7 +17,7 @@ const FIXES = {
   // ── CONTACTO ──
   'contacto/index.html': {
     title: null,
-    // Fix multiple H1s: change second H1 "¡CON PRESENCIA INTERNACIONAL!" to H2
+    // Fix multiple H1s: downgrade extra H1s to H2
     h1: null, // will keep "Contacto" and downgrade the others
     og: {
       description: 'Comunícate con SIM Energy. Oficina en San Cristóbal, Táchira, Venezuela. Teléfono, email y formulario de contacto.',
