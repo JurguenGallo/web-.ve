@@ -282,6 +282,14 @@ web-.ve/
 
 ---
 
+## Sesión 16 — 2026-05-30
+
+### 23. Ajustes visuales en contacto e inicio
+- **Igualar tamaño de recuadros en Contacto:** Se corrigió el CSS de los contadores "18 Años brindando soluciones" y "+200 Proyectos terminados" en `contacto/index.html` para que ambos tengan exactamente el mismo alto usando flexbox con `align-items: stretch`, evitando que el texto más largo del primer recuadro lo hiciera más grande que el segundo.
+- **Reducir imágenes de servicios en Inicio:** Se redujo el tamaño de las imágenes del grid de servicios (Montaje de equipos, Puesta en servicio, Pruebas de protecciones, etc.) en el slider `#n2-ss-3` de la página de inicio al 50% de su contenedor, centradas, para un diseño más proporcionado.
+
+---
+
 ## Cómo actualizar el sitio (para el amigo)
 
 ### Si el .co cambió y querés bajar los cambios nuevos:
